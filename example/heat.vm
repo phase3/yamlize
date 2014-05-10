@@ -1,0 +1,12 @@
+
+Test Header
+#foreach($v in $yaml.vmlist )
+    vm: $v.name
+        version: $v.version
+        ip: #if ($v.use_floating_ip) $v.use_floating_ip #else - #end
+#end
+
+\# env TEMP = $env('TEMP')
+\# param foo = #if ($params.foo) $params.foo #end
+
+Test Footer
